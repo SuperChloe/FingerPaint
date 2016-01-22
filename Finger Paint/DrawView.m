@@ -20,7 +20,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    [[UIColor blackColor] setStroke];
+    [[UIColor blueColor] setStroke];
     self.path.lineWidth = 1.0;
     [self.path stroke];
 }
