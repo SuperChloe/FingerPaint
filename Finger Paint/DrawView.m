@@ -10,14 +10,19 @@
 
 @implementation DrawView
 
-- (void)drawRect:(CGRect)rect {
-    [[UIColor blackColor] setStroke];
-    self.path.lineWidth = 3.0;
-    [self.path stroke];
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _path = [UIBezierPath bezierPath];
+        _pointsArray = [[NSMutableArray alloc] init];
+    }
+    return self;
 }
 
-- (IBAction)drawLine:(UIPanGestureRecognizer *)sender {
-    
+- (void)drawRect:(CGRect)rect {
+    [[UIColor blackColor] setStroke];
+    self.path.lineWidth = 1.0;
+    [self.path stroke];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
