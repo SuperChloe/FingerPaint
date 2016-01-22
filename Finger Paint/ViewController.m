@@ -20,6 +20,7 @@
     [super viewDidLoad];
     
     DrawView *drawView = [[DrawView alloc] initWithFrame:self.view.bounds];
+    drawView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:drawView];
     
 }

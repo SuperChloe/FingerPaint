@@ -43,7 +43,6 @@
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.path closePath];
     [self setNeedsDisplay];
 }
 
