@@ -39,8 +39,7 @@
         
         [oldLine stroke];
     }
-    
-    self.path = [UIBezierPath bezierPath];
+
     [self.penColor setStroke];
     self.path.lineWidth = 5.0;
     self.path.lineCapStyle = kCGLineCapRound;
@@ -49,7 +48,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     CGPoint touchLocation = [[touches anyObject] locationInView:self];
-    
+    self.path = [UIBezierPath bezierPath];
     [self.path moveToPoint:touchLocation];
     self.start = touchLocation;
 }
