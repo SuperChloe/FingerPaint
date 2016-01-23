@@ -15,54 +15,68 @@
     self = [super initWithFrame:frame];
     if (self) {
         _path = [UIBezierPath bezierPath];
-        _pathsArray = [[NSMutableArray alloc] init];
+        _points = [[NSMutableArray alloc] init];
         _penColor = [UIColor blueColor];
+        _linesArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)drawRect:(CGRect)rect {
-    for (Line *line in self.pathsArray) {
-        line.linePath = [UIBezierPath bezierPath];
-        [line.lineColor setStroke];
-        [line.linePath stroke];
+    for (Line *line in self.linesArray) {
+        UIBezierPath *oldLine = [UIBezierPath bezierPath];
+        UIColor *oldColor = line.lineColor;
+        
+        [oldColor setStroke];
+        oldLine.lineWidth = 5.0;
+        oldLine.lineCapStyle = kCGLineCapRound;
+        
+        [oldLine moveToPoint:line.startLine];
+        
+        for (NSValue *point in line.points) {
+            [oldLine addLineToPoint:[point CGPointValue]];
+        }
+        
+        [oldLine stroke];
     }
     
+    self.path = [UIBezierPath bezierPath];
     [self.penColor setStroke];
-    self.path.lineWidth = 3.0;
+    self.path.lineWidth = 5.0;
+    self.path.lineCapStyle = kCGLineCapRound;
     [self.path stroke];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInView:self];
+    CGPoint touchLocation = [[touches anyObject] locationInView:self];
     
     [self.path moveToPoint:touchLocation];
-//    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocation]];
+    self.start = touchLocation;
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocaton = [touch locationInView:self];
+    CGPoint touchLocaton = [[touches anyObject] locationInView:self];
     
     [self.path addLineToPoint:touchLocaton];
     [self setNeedsDisplay];
-//    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocaton]];
+    [self.points addObject:[NSValue valueWithCGPoint:touchLocaton]];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     Line *line = [[Line alloc] init];
-    line.linePath = self.path;
     line.lineColor = self.penColor;
-    [self.pathsArray addObject:line];
+    line.startLine = self.start;
+    line.points = self.points;
+    [self.linesArray addObject:line];
     [self setNeedsDisplay];
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     Line *line = [[Line alloc] init];
-    line.linePath = self.path;
     line.lineColor = self.penColor;
-    [self.pathsArray addObject:line];
+    line.startLine = self.start;
+    line.points = self.points;
+    [self.linesArray addObject:line];
     [self setNeedsDisplay];
 }
 

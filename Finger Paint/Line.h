@@ -11,7 +11,8 @@
 
 @interface Line : NSObject
 
-@property (nonatomic, strong) UIBezierPath *linePath;
+@property (nonatomic, strong) NSMutableArray *points;
+@property (nonatomic, assign) CGPoint startLine;
 @property (nonatomic, strong) UIColor *lineColor;
 
 @end
