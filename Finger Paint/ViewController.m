@@ -10,8 +10,8 @@
 #import "DrawView.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *colorPickerView;
 
-@property (weak, nonatomic) IBOutlet UIButton *button;
 @property (nonatomic, strong) DrawView *drawView;
 
 @end
@@ -25,7 +25,7 @@
     self.drawView.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.drawView];
     
-    [self.view bringSubviewToFront:self.button];
+    [self.view bringSubviewToFront:self.colorPickerView];
     
 }
 
@@ -34,9 +34,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)button:(id)sender {
-    self.drawView.penColor = [UIColor purpleColor];
-}
+
 
 
 @end
