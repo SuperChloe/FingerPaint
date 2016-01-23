@@ -10,7 +10,8 @@
 #import "DrawView.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *colorPickerView;
+
+@property (weak, nonatomic) IBOutlet UIStackView *colorPickerView;
 
 @property (nonatomic, strong) DrawView *drawView;
 
@@ -34,6 +35,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)redButton:(id)sender {
+}
+- (IBAction)coralButton:(id)sender {
+}
+- (IBAction)orangeButton:(id)sender {
+}
+- (IBAction)tangerineButton:(id)sender {
+}
+- (IBAction)yellowButton:(id)sender {
+}
+- (IBAction)neonGreenButton:(id)sender {
+}
+- (IBAction)greenButton:(id)sender {
+}
+- (IBAction)tealButton:(id)sender {
+}
+- (IBAction)blueButton:(id)sender {
+}
+- (IBAction)indigoButton:(id)sender {
+}
+- (IBAction)purpleButton:(id)sender {
+}
+- (IBAction)magentaButton:(id)sender {
+}
+- (IBAction)blackButton:(id)sender {
+}
+- (IBAction)eraserButton:(id)sender {
+}
 
 
 
