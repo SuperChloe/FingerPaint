@@ -66,18 +66,20 @@
     Line *line = [[Line alloc] init];
     line.lineColor = self.penColor;
     line.startLine = self.start;
-    line.points = self.points;
+    line.points = [NSMutableArray arrayWithArray:self.points];
     [self.linesArray addObject:line];
     [self setNeedsDisplay];
+    [self.points removeAllObjects];
 }
 
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     Line *line = [[Line alloc] init];
     line.lineColor = self.penColor;
     line.startLine = self.start;
-    line.points = self.points;
+    line.points = [NSMutableArray arrayWithArray:self.points];
     [self.linesArray addObject:line];
     [self setNeedsDisplay];
+    [self.points removeAllObjects];
 }
 
 
