@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *button;
+@property (nonatomic, strong) DrawView *drawView;
 
 @end
 
@@ -19,9 +21,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    DrawView *drawView = [[DrawView alloc] initWithFrame:self.view.bounds];
-    drawView.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:drawView];
+    self.drawView = [[DrawView alloc] initWithFrame:self.view.bounds];
+    self.drawView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.drawView];
+    
+    [self.view bringSubviewToFront:self.button];
     
 }
 
@@ -30,6 +34,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)button:(id)sender {
+    self.drawView.penColor = [UIColor purpleColor];
+}
 
 
 @end

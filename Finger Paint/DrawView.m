@@ -7,6 +7,7 @@
 //
 
 #import "DrawView.h"
+#import "Line.h"
 
 @implementation DrawView
 
@@ -14,14 +15,21 @@
     self = [super initWithFrame:frame];
     if (self) {
         _path = [UIBezierPath bezierPath];
-        _pointsArray = [[NSMutableArray alloc] init];
+        _pathsArray = [[NSMutableArray alloc] init];
+        _penColor = [UIColor blueColor];
     }
     return self;
 }
 
 - (void)drawRect:(CGRect)rect {
-    [[UIColor blueColor] setStroke];
-    self.path.lineWidth = 1.0;
+    for (Line *line in self.pathsArray) {
+        line.linePath = [UIBezierPath bezierPath];
+        [line.lineColor setStroke];
+        [line.linePath stroke];
+    }
+    
+    [self.penColor setStroke];
+    self.path.lineWidth = 3.0;
     [self.path stroke];
 }
 
@@ -30,7 +38,7 @@
     CGPoint touchLocation = [touch locationInView:self];
     
     [self.path moveToPoint:touchLocation];
-    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocation]];
+//    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocation]];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -39,10 +47,22 @@
     
     [self.path addLineToPoint:touchLocaton];
     [self setNeedsDisplay];
-    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocaton]];
+//    [self.pointsArray addObject:[NSValue valueWithCGPoint:touchLocaton]];
 }
 
 - (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    Line *line = [[Line alloc] init];
+    line.linePath = self.path;
+    line.lineColor = self.penColor;
+    [self.pathsArray addObject:line];
+    [self setNeedsDisplay];
+}
+
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    Line *line = [[Line alloc] init];
+    line.linePath = self.path;
+    line.lineColor = self.penColor;
+    [self.pathsArray addObject:line];
     [self setNeedsDisplay];
 }
 

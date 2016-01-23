@@ -11,6 +11,7 @@
 @interface DrawView : UIView
 
 @property (nonatomic, strong) UIBezierPath *path;
-@property (nonatomic, strong) NSMutableArray *pointsArray;
+@property (nonatomic, strong) NSMutableArray *pathsArray;
+@property (nonatomic, strong) UIColor *penColor;
 
 @end
