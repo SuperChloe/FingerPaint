@@ -14,7 +14,6 @@
 		8959706B1C52A9BA0097FDCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8959706A1C52A9BA0097FDCB /* Assets.xcassets */; };
 		8959706E1C52A9BA0097FDCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8959706C1C52A9BA0097FDCB /* LaunchScreen.storyboard */; };
 		895970771C52E3CC0097FDCB /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 895970761C52E3CC0097FDCB /* DrawView.m */; };
-		895970801C52FDA20097FDCB /* ColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8959707F1C52FDA20097FDCB /* ColorViewController.m */; };
 		899EB0611C53E3950016F3F1 /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 899EB0601C53E3950016F3F1 /* Line.m */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +30,6 @@
 		8959706F1C52A9BA0097FDCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		895970751C52E3CC0097FDCB /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		895970761C52E3CC0097FDCB /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
-		8959707E1C52FDA20097FDCB /* ColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorViewController.h; sourceTree = "<group>"; };
-		8959707F1C52FDA20097FDCB /* ColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorViewController.m; sourceTree = "<group>"; };
 		899EB05F1C53E3950016F3F1 /* Line.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
 		899EB0601C53E3950016F3F1 /* Line.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,8 +70,6 @@
 				895970651C52A9BA0097FDCB /* ViewController.m */,
 				895970751C52E3CC0097FDCB /* DrawView.h */,
 				895970761C52E3CC0097FDCB /* DrawView.m */,
-				8959707E1C52FDA20097FDCB /* ColorViewController.h */,
-				8959707F1C52FDA20097FDCB /* ColorViewController.m */,
 				899EB05F1C53E3950016F3F1 /* Line.h */,
 				899EB0601C53E3950016F3F1 /* Line.m */,
 				895970671C52A9BA0097FDCB /* Main.storyboard */,
@@ -167,7 +162,6 @@
 			files = (
 				895970661C52A9BA0097FDCB /* ViewController.m in Sources */,
 				899EB0611C53E3950016F3F1 /* Line.m in Sources */,
-				895970801C52FDA20097FDCB /* ColorViewController.m in Sources */,
 				895970631C52A9BA0097FDCB /* AppDelegate.m in Sources */,
 				895970771C52E3CC0097FDCB /* DrawView.m in Sources */,
 				895970601C52A9BA0097FDCB /* main.m in Sources */,

@@ -35,6 +35,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Color Picker Buttons
+
 - (IBAction)redButton:(id)sender {
     self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
 }

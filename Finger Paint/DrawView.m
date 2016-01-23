@@ -16,7 +16,7 @@
     if (self) {
         _path = [UIBezierPath bezierPath];
         _points = [[NSMutableArray alloc] init];
-        _penColor = [UIColor blueColor];
+        _penColor = [UIColor blackColor];
         _linesArray = [[NSMutableArray alloc] init];
     }
     return self;
