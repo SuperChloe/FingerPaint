@@ -34,14 +34,14 @@
                                         <rect key="frame" x="43" y="0.0" width="43" height="80"/>
                                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="orangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OEN-Jb-Mu4"/>
+                                            <action selector="coralButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v3o-de-rSq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhk-Ao-i7h" userLabel="Orange">
                                         <rect key="frame" x="86" y="0.0" width="43" height="80"/>
                                         <color key="backgroundColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <action selector="tangerineButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wma-1C-3uz"/>
+                                            <action selector="orangeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uaT-vY-Bmo"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5o4-3o-8dO" userLabel="Tangerine">

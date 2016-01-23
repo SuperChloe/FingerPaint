@@ -36,32 +36,46 @@
 }
 
 - (IBAction)redButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)coralButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:102.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)orangeButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:153.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)tangerineButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:204.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)yellowButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)neonGreenButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:153.0/255.0 green:255.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)greenButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:.0/255.0 green:205.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)tealButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:0.0/255.0 green:153.0/255.0 blue:153.0/255.0 alpha:1.0];
 }
 - (IBAction)blueButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:0.0/255.0 green:51.0/255.0 blue:204.0/255.0 alpha:1.0];
 }
 - (IBAction)indigoButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:51.0/255.0 green:0.0/255.0 blue:153.0/255.0 alpha:1.0];
 }
 - (IBAction)purpleButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:102.0/255.0 green:0.0/255.0 blue:153.0/255.0 alpha:1.0];
 }
 - (IBAction)magentaButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:204.0/255.0 green:0.0/255.0 blue:153.0/255.0 alpha:1.0];
 }
 - (IBAction)blackButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:0.0/255.0 green:0.0/255.0 blue:0.0/255.0 alpha:1.0];
 }
 - (IBAction)eraserButton:(id)sender {
+    self.drawView.penColor = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
 }
 
 
